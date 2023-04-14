@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+.intro-header {
+  height: unset !important;
+}
+.img {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.nav-item {
+  font-size: 18px;
+  text-align: right;
+}
+h1 {
+  letter-spacing: 8px;
+}
+h5 {
+  letter-spacing: 3px;
+}
+.pl-10{
+  padding-left: 10px;
+}
+.pt-5{
+  padding-top: 50px;
+}
+p{
+  font-size: 18px;
+}
+.row{
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-right: -60px;
+  margin-left: -60px;
+}
+
+@media (min-width: 1200px) {
+  .row {
+    padding-top: 30px;
+    padding-left: 125px;
+    padding-right: 125px;
+    margin-right: -60px;
+    margin-left: -60px;
+  }
+}
+h2 {
+  font-size: 4rem !important;
+}
+h3{
+  font-size: 2.5rem !important;
+}
+h5{
+  font-size: 1.75rem !important;
+}
+p{
+  font-size: 1.5rem !important;
+}
+@media (max-width: 850px) {
+  h2 {
+    font-size: 3rem !important;
+  }
+  h3{
+    font-size: 1.5rem !important;
+  }
+  h5{
+    font-size: 1.25rem !important;
+  }
+  p{
+    font-size: 1.15rem !important;
+  }
+}
+//change color on scroll
+.navbar.scrolling-navbar.top-nav-collapse {
+  background-color: #090d0e !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -3,14 +3,15 @@ img {
   width: 100%;
   height: 100%;
 }
+.pt-1{
+  padding: 10px;
+}
 .bg {
   background-size: cover;
   width: 100%;
   height: 100%;
   background-repeat: repeat;
-  background-color: #090d0e;
 }
-
 // tablets and smaller
 @media (max-width: 511px) {
 
@@ -31,4 +32,3 @@ img {
     margin-left: -60px;
   }
 }
-

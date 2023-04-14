@@ -1,0 +1,126 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false">
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand waves-light " mdbWavesEffect href="#"><strong>DANBERRY</strong></a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/home">HOME</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/about">ABOUT</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link"  routerLink="/learn">LEARN</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/shop">SHOP</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" routerLink="/connect">CONNECT</a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+<div class="fill">
+  <img src="../../assets/imgs/mask.png"/>
+    <div class="full-bg-img mask rgba-black-light"></div>
+</div>
+<header class="intro-header">
+  <div class="view jarallax bg" data-jarallax='{"speed": 0.2}'>
+    <section class="pb-2">
+      <div class="text-center">
+        <h2 class="pt-3 pl-10 wow fadeInDown">Connect</h2>
+        <h3 class="pl-10 wow fadeInDown">Lets Collaborate</h3>
+      </div>
+      <!--Section description-->
+
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-lg-5 my-4">
+          <div class="text-center">
+            <p class="p-10 mb-15 wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure
+              provident
+              voluptate esse quasi.
+            </p>
+          </div>
+          <br>
+          <!--Form begins-->
+          <mdb-card>
+            <mdb-card-body>
+              <form class="form wow fadeInLeft" name="form" (ngSubmit)="f.form.valid ; f.resetForm()" #f="ngForm" novalidate>
+                <div class="md-form">
+                  <mdb-icon fas icon="hands-helping" class="prefix grey-text"></mdb-icon>
+                  <label for="form1">Service</label>
+                </div>
+                <div class="md-form">
+                  <div class="space"></div>
+                </div>
+                <!-- Service/Subject -->
+                <div class="md-form">
+                  <select #subject [(ngModel)]="model.subject"
+                        class="form-control" name="subject" id="form1"
+                        placeholder="Choose Option"
+                        required type="text">
+                    <option *ngFor="let ser of services" [value]="ser">{{ser}}</option>
+                  </select>
+                </div>
+                <!-- Name -->
+                <div class="md-form">
+                  <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+                  <input mdbInput class="form-control" name="name" type="text" id="form2" required
+                         #name [(ngModel)]="model.name">
+                  <label for="form2">Your name</label>
+                </div>
+                <!-- replyto -->
+                <div class="md-form">
+                  <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+                  <input mdbInput class="form-control" name="replyto" type="text" id="form3" required
+                         #replyto [(ngModel)]="model.replyto">
+                  <label for="form3">Your email</label>
+                </div>
+                <!-- message -->
+                <div class="md-form">
+                  <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
+                  <textarea mdbInput class="md-textarea" name="message" type="text" id="form8" required
+                            #message [(ngModel)]="model.message">
+                  </textarea>
+                  <label for="form8">Your Message</label>
+                </div>
+                <!-- submit -->
+                <div class="text-center">
+                  <button type="button" mdbBtn color="dark" mdbWavesEffect
+                          (click)="onSubmit(subject.value, name.value, replyto.value, message.value);
+                          f.resetForm() ">Submit</button>
+                </div>
+              </form>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+<!-- Socials -->
+        <div class="col-md-7">
+        <br>
+          <div class="row text-center">
+            <!--Twitter-->
+            <div class="col-md-4 wow fadeInUp">
+              <mdb-icon fab icon="twitter-square" size="3x"></mdb-icon>
+              <p>San Francisco, CA 94126</p>
+            </div>
+            <!--Insta-->
+            <div class="col-md-4 wow fadeInUp">
+              <mdb-icon fab icon="instagram" size="3x"></mdb-icon>
+              <p>+ 01 234 567 89</p>
+            </div>
+            <!-- Linkedin -->
+            <div class="col-md-4 wow fadeInUp">
+              <mdb-icon fab icon="linkedin" size="3x"></mdb-icon>
+              <p>info@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</header>
+
+

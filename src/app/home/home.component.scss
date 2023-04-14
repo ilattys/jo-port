@@ -1,0 +1,62 @@
+//full screen background
+.bg {
+  height:100vh !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #090d0e;
+}
+.cl{
+  margin-top: 1.5vh;
+}
+@media (max-width: 1300px) {
+ .bg {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+@media (max-width: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 700px;
+  }
+}
+.row {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+// iPhone
+@media (max-width: 376px) {
+  h3{
+    font-size: 1.25rem !important;
+  }
+}
+// Galaxy Fold
+@media (max-width: 281px) {
+  h2 {
+    font-size: 2.25rem !important;
+  }
+  h3{
+    font-size: 1rem !important;
+  }
+}
